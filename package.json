@@ -1,0 +1,27 @@
+{
+  "name": "collegedao",
+  "version": "1.0.0",
+  "description": "College DAO - Supporting blockchain innovation across 150+ universities",
+  "type": "module",
+  "scripts": {
+    "format": "prettier -w .",
+    "validate": "node scripts/validate.mjs",
+    "rebuild": "node scripts/rebuild.mjs"
+  },
+  "keywords": [
+    "dao",
+    "blockchain",
+    "university",
+    "governance"
+  ],
+  "author": "College DAO",
+  "license": "MIT",
+  "devDependencies": {
+    "globby": "^14.0.0",
+    "gray-matter": "^4.0.3",
+    "prettier": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

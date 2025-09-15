@@ -1,0 +1,22 @@
+# Clubs Leaderboard
+
+*Auto-generated from contribution data. Last updated: 2025-09-15*
+
+| Rank | Name | Total Contributed (USD) | Last Contribution | Profile |
+|------|------|------------------------|-------------------|---------|
+| 1 | Example University Blockchain Club | $80.00 | 2025-09-08 | [View](clubs/example.md) |
+
+## Summary
+
+- **Total Clubs**: 1
+- **Total Contributed**: $80.00
+- **Average Contribution**: $80.00
+
+## How to Contribute
+
+1. Create your club profile in `profiles/clubs/`
+2. Record contributions in `contributions/clubs/<your-slug>/<year>/`
+3. Include the required `amount: $<USD>` line
+4. Submit a pull request
+
+See [CLAUDE.md](../CLAUDE.md) for detailed instructions.
