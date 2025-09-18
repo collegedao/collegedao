@@ -4,10 +4,10 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'contributions/**/*.md'
-      - 'clubs/*.md'
-      - 'organizations/*.md'
-      - 'donors/*.md'
+      - 'contributions/**/*.mdx'
+      - 'profiles/clubs/*.mdx'
+      - 'profiles/organizations/*.mdx'
+      - 'profiles/donors/*.mdx'
   workflow_dispatch:
   schedule:
     # Run daily at 00:00 UTC

@@ -46,20 +46,40 @@ College DAO operates through a hybrid governance model combining:
 │  ├─ clubs/           # University club profiles
 │  ├─ organizations/   # Sponsor organization profiles  
 │  ├─ donors/         # Individual donor profiles
-│  ├─ CLUBS.md        # Auto-generated club leaderboard
-│  ├─ ORGANIZATIONS.md # Auto-generated org leaderboard
-│  └─ DONORS.md       # Auto-generated donor leaderboard
+│  ├─ clubs.md        # Auto-generated club leaderboard
+│  ├─ organizations.md # Auto-generated org leaderboard
+│  └─ donors.md       # Auto-generated donor leaderboard
 ├─ proposals/          # Funding proposals by year/season
 ├─ contributions/      # Tracked donations and contributions
-├─ docs/               # Governance and treasury documentation
+├─ documentation/      # Governance and treasury documentation
 └─ scripts/            # Validation and leaderboard automation
 ```
 
+## Documentation
+
+This repository uses [Mintlify](https://mintlify.com) for documentation. To run the documentation site locally:
+
+```bash
+# Install dependencies
+pnpm install
+
+# Install Mintlify CLI
+pnpm add -g mintlify
+
+# Run documentation development server
+pnpm docs:dev
+
+# Build documentation for production
+pnpm docs:build
+```
+
+The documentation will be available at http://localhost:3333
+
 ## Quick Links
 
-- [Governance Overview](docs/GOVERNANCE.md) — Council model, voting, and proposal process
-- [Realms Guide](docs/REALMS.md) — Creating and linking on-chain proposals
-- [Treasury Guide](docs/TREASURY.md) — Donation guidelines and wallet addresses
+- [Governance Overview](documentation/governance.md) — Council model, voting, and proposal process
+- [Realms Guide](documentation/realms.md) — Creating and linking on-chain proposals
+- [Treasury Guide](documentation/treasury.md) — Donation guidelines and wallet addresses
 - [Contribution Guidelines](#contribution-culture) — Recording donations
 
 ## Contribution Culture

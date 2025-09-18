@@ -1,0 +1,113 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "College DAO",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373"
+  },
+  "tabs": [
+    {
+      "name": "Overview",
+      "url": "overview"
+    },
+    {
+      "name": "Profiles", 
+      "url": "profiles"
+    },
+    {
+      "name": "Proposals",
+      "url": "proposals"
+    },
+    {
+      "name": "Contributions",
+      "url": "contributions"
+    }
+  ],
+  "topbarLinks": [
+    {
+      "name": "Contact",
+      "url": "mailto:admin@collegedao.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "College DAO",
+    "url": "https://collegedao.io"
+  },
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/collegedao"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/collegedao"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "documentation/overview",
+        "documentation/governance",
+        "documentation/treasury", 
+        "documentation/realms"
+      ]
+    },
+    {
+      "group": "Leaderboards",
+      "pages": [
+        "profiles/clubs",
+        "profiles/organizations",
+        "profiles/donors"
+      ]
+    },
+    {
+      "group": "Club Profiles",
+      "pages": ["profiles/clubs/example"]
+    },
+    {
+      "group": "Organization Profiles",
+      "pages": ["profiles/organizations/example"]
+    },
+    {
+      "group": "Donor Profiles",
+      "pages": ["profiles/donors/example"]
+    },
+    {
+      "group": "2025 Proposals",
+      "pages": [
+        "proposals/overview",
+        "proposals/2025/fall/example-travel-sponsorship"
+      ]
+    },
+    {
+      "group": "Overview",
+      "pages": ["contributions/overview"]
+    },
+    {
+      "group": "Club Contributions",
+      "pages": ["contributions/clubs/example/2025/example-event"]
+    },
+    {
+      "group": "Organization Contributions",
+      "pages": ["contributions/organizations/example/2025/kickoff-support"]
+    },
+    {
+      "group": "Donor Contributions",
+      "pages": ["contributions/donors/example/2025/example-donation"]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/collegedao",
+    "github": "https://github.com/collegedao",
+    "linkedin": "https://linkedin.com/company/collegedao"
+  }
+}

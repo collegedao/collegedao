@@ -132,6 +132,27 @@ Total contributed (USD): $2500.00
 Last contribution: 2025-09-15
 ```
 
+## Mintlify Documentation
+
+The repository uses Mintlify for documentation. Configuration notes:
+
+### Important Configuration Rules
+- **DO NOT** include the CLAUDE.md file in Mintlify navigation
+- The CLAUDE.md file is for development reference only and should remain accessible via direct file access
+- When updating mint.json, ensure CLAUDE.md is not added to any navigation groups or tabs
+
+### Running Documentation
+```bash
+# Install Mintlify CLI
+pnpm add -g mintlify
+
+# Run documentation development server
+pnpm docs:dev
+
+# Build documentation for production
+pnpm docs:build
+```
+
 ## Questions?
 
 Open an issue in the repository for help with validation or rebuild scripts.

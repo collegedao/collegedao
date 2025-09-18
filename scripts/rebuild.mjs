@@ -119,7 +119,7 @@ async function generateLeaderboard(entityType, entities) {
   
   for (let i = 0; i < sorted.length; i++) {
     const entity = sorted[i];
-    const profilePath = `profiles/${entityType}s/${entity.slug}.md`;
+    const profilePath = `profiles/${entityType}s/${entity.slug}.mdx`;
     
     // Try to get the entity name from profile
     let name = entity.slug;
@@ -131,7 +131,7 @@ async function generateLeaderboard(entityType, entities) {
     }
     
     const formattedDate = entity.lastDate || 'N/A';
-    content += `| ${i + 1} | ${name} | ${formatCurrency(entity.total)} | ${formattedDate} | [View](${entityType}s/${entity.slug}.md) |\n`;
+    content += `| ${i + 1} | ${name} | ${formatCurrency(entity.total)} | ${formattedDate} | [View](${entityType}s/${entity.slug}.mdx) |\n`;
   }
   
   if (sorted.length === 0) {
@@ -154,7 +154,7 @@ async function generateLeaderboard(entityType, entities) {
 
 See [CLAUDE.md](../CLAUDE.md) for detailed instructions.`;
   
-  const filename = `profiles/${title.toUpperCase()}.md`;
+  const filename = `profiles/${title.toUpperCase()}.mdx`;
   await fs.writeFile(filename, content);
   console.log(`✅ Generated ${filename}`);
 }
@@ -164,7 +164,7 @@ async function main() {
   
   // Process all contributions
   console.log('📊 Processing contributions...');
-  const contributions = await globby('contributions/**/*.md');
+  const contributions = await globby('contributions/**/*.mdx');
   
   for (const file of contributions) {
     await processContribution(file);
@@ -181,7 +181,7 @@ async function main() {
   console.log('\n📝 Updating profile totals...');
   for (const [type, entityMap] of Object.entries(entities)) {
     for (const [slug, data] of entityMap) {
-      const profilePath = `profiles/${type}s/${slug}.md`;
+      const profilePath = `profiles/${type}s/${slug}.mdx`;
       try {
         await updateProfile(profilePath, data);
       } catch (error) {

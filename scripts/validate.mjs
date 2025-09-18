@@ -47,7 +47,7 @@ async function validateProfile(filePath) {
   }
   
   // Validate slug matches filename
-  const expectedSlug = path.basename(filePath, '.md');
+  const expectedSlug = path.basename(filePath, '.mdx');
   if (data.slug !== expectedSlug) {
     logError(filePath, `Slug "${data.slug}" doesn't match filename "${expectedSlug}"`);
   }
@@ -168,7 +168,7 @@ async function main() {
   console.log('📋 Checking profiles...');
   const profileTypes = ['clubs', 'organizations', 'donors'];
   for (const type of profileTypes) {
-    const files = await globby(`profiles/${type}/*.md`);
+    const files = await globby(`profiles/${type}/*.mdx`);
     for (const file of files) {
       await validateProfile(file);
     }
@@ -176,14 +176,14 @@ async function main() {
   
   // Validate contributions
   console.log('\n💰 Checking contributions...');
-  const contributions = await globby('contributions/**/*.md');
+  const contributions = await globby('contributions/**/*.mdx');
   for (const file of contributions) {
     await validateContribution(file);
   }
   
   // Validate proposals
   console.log('\n📜 Checking proposals...');
-  const proposals = await globby('proposals/**/*.md');
+  const proposals = await globby('proposals/**/*.mdx');
   for (const file of proposals) {
     await validateProposal(file);
   }

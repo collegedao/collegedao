@@ -6,7 +6,9 @@
   "scripts": {
     "format": "prettier -w .",
     "validate": "node scripts/validate.mjs",
-    "rebuild": "node scripts/rebuild.mjs"
+    "rebuild": "node scripts/rebuild.mjs",
+    "docs:dev": "mintlify dev --port 3333",
+    "docs:build": "mintlify build"
   },
   "keywords": [
     "dao",
