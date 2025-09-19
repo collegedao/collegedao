@@ -164,7 +164,9 @@ async function main() {
   
   // Process all contributions
   console.log('📊 Processing contributions...');
-  const contributions = await globby('contributions/**/*.mdx');
+  const contributions = await globby('contributions/**/*.mdx', {
+    ignore: ['**/overview.mdx']
+  });
   
   for (const file of contributions) {
     await processContribution(file);

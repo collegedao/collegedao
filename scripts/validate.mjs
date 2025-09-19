@@ -176,14 +176,18 @@ async function main() {
   
   // Validate contributions
   console.log('\n💰 Checking contributions...');
-  const contributions = await globby('contributions/**/*.mdx');
+  const contributions = await globby('contributions/**/*.mdx', {
+    ignore: ['**/overview.mdx']
+  });
   for (const file of contributions) {
     await validateContribution(file);
   }
   
   // Validate proposals
   console.log('\n📜 Checking proposals...');
-  const proposals = await globby('proposals/**/*.mdx');
+  const proposals = await globby('proposals/**/*.mdx', {
+    ignore: ['**/overview.mdx']
+  });
   for (const file of proposals) {
     await validateProposal(file);
   }
