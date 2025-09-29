@@ -1,0 +1,269 @@
+# Get Started with College DAO
+
+Welcome to College DAO! This guide will walk you through everything you need to join our community of university blockchain clubs. From creating your club profile to submitting proposals and contributing back to the DAO, we've got you covered.
+
+## Prerequisites
+
+Before you begin, you'll need:
+
+1. **A Solana Wallet**
+   - We recommend [Phantom](https://phantom.app/), [Solflare](https://solflare.com/), or [Backpack](https://backpack.app/)
+   - If you are using a multi-sig wallet for your club, you can use [Squads](https://squads.xyz/). Contact the core team for a SquadsX account (free for all eligible clubs made possible with our partnership with Squads)
+   - Fund it with at least ~0.1 SOL for transaction fees
+   - Keep your seed phrase(s) secure!
+
+2. **GitHub Account**
+   - All club profiles and proposals start on GitHub
+   - Basic knowledge of pull requests and git is helpful
+   - Don't worry if you're new - we'll guide you through it!
+
+3. **Active University Blockchain Club**
+   - Must be affiliated with an accredited university
+   - Have regular meetings and activities
+   - Committed to the give-back culture
+
+## Step 1: Create Your Club Profile
+
+Your journey starts by creating a club profile on GitHub. This establishes your presence in the DAO and tracks your contributions.
+
+### 1.1 Fork and Clone the Repository
+
+```bash
+# Fork the repo on GitHub first, then:
+git clone https://github.com/<YOUR-USERNAME>/collegedao.git
+cd collegedao
+```
+
+### 1.2 Create Your Club Profile
+
+Create a new file in the profiles directory:
+```
+profiles/clubs/<YOUR-CLUB>.mdx
+```
+
+Use this template:
+
+```markdown
+---
+name: Your University Blockchain Club
+slug: your-club-slug
+type: club
+university: Your University Name
+region: North America # or Europe, Asia, etc.
+website: 'https://your-club-website.xyz'
+socials:
+  x: 'https://x.com/your_club'
+  discord: 'https://discord.gg/your-invite'
+---
+
+# Overview
+
+Describe your club's mission, activities, and what makes you unique. Include information about your members, past events, and future goals.
+
+## Wallets
+
+List your club's treasury wallets (at least Solana required as we will add this address to the governance program):
+
+- Solana: `YourSolanaWalletAddressHere`
+- Ethereum: `0xYourEthereumAddressHere` (optional)
+
+## Contributions
+
+This section will link to your future contributions:
+View all our contributions to College DAO: [contributions/clubs/<your-club-slug>/](../../contributions/clubs/<your-club-slug>)
+
+## Totals
+
+These will be auto-updated by our scripts:
+
+Total contributed (USD): $0.00
+Last contribution: N/A
+
+## Contacts
+
+- President: president@your-club.edu
+- Treasury: treasury@your-club.edu
+- Events: events@your-club.edu
+```
+
+### 1.3 Submit Your Profile
+
+```bash
+git add profiles/clubs/your-club-slug.mdx
+git commit -m "feat: add Your University Blockchain Club profile"
+git push origin main
+```
+
+Then create a pull request on GitHub with the title:
+```
+feat: add [Your University] Blockchain Club profile
+```
+
+## Step 2: Get Sponsored by an Existing Member
+
+New clubs need an existing council member to back their application and raise the proposal adding them to the DAO. This ensures quality and helps with onboarding.
+
+### Finding a Sponsor
+
+1. **Browse existing clubs**: Check `profiles/clubs/` for clubs in your region
+2. **Reach out**: Join our Telegram community and introduce yourself
+3. **Actively contribue**: Great way to meet and partner with other members of the community
+
+## Step 3: Join the Council
+
+Once a club has agreed to sponsor you, they will raise an on-chain proposal on Realms to add the Solana address you have in your profile pull request to the governance program. You'll need to pass a council vote to officially join, which is why having a working history and a track record of good contributions is helpful since other student organizations on the council will be familiar with you.
+
+## Step 4: Create Your First Funding Proposal
+
+After your profile PR is merged, you are officially part of the community.
+
+You can raise proposals to the rest of the DAO, such as proposals to unlock funds from the treasury to fund initiatives.
+This could also take the form of multi-school initiatives such as travel sponsorships where students from multiple universities receive funding to travel out to conferences and hackathons.
+
+### 4.1 Draft on GitHub
+
+Create your proposal in the proposals directory:
+```
+proposals/2025/fall/your-hackathon-funding.mdx
+```
+
+### 4.2 Convert to On-Chain Proposal
+
+After community feedback (minimum 3 days), create the Realms proposal:
+
+1. **Visit Realms**: https://app.realms.today/dao/[COLLEGE_DAO_ID]
+2. **Connect your wallet**: Use the same wallet from your club profile
+3. **Click "New Proposal"**
+4. **Fill in details**:
+   - Title: Match your GitHub proposal
+   - Description: Include GitHub PR link
+   - Type: Executable (for funding)
+5. **Add treasury instruction**:
+   - Transfer from: DAO Treasury
+   - Transfer to: Your club wallet
+   - Amount: Your requested tokens
+
+### 4.3 Get It Passed
+
+- **Notify members**: Share in Discord #proposals
+- **Answer questions**: Be responsive to feedback
+- **66% threshold**: Need supermajority to pass
+- **5-day voting period**: Standard timeline
+
+## Step 5: Execute Your Event
+
+After your proposal passes and you receive funding:
+
+### 5.1 Run Your Event
+
+- Execute according to your proposal
+- Document with photos and metrics
+- Track all expenses carefully
+
+### 5.2 Contribute Back
+
+This is crucial! Within 30 days of your event:
+
+1. **Calculate contribution**: 5-10% of net proceeds
+2. **Send to treasury**: Use addresses from Treasury Guide
+3. **Record on GitHub**: Create a contribution file
+
+Example contribution:
+```
+contributions/clubs/your-club-slug/2025/hackathon-giveback.mdx
+```
+
+## Step 6: Participate in Governance
+
+As a council member, you have responsibilities:
+
+### Voting on Proposals
+
+1. **Review regularly**: Check new proposals weekly
+2. **Research thoroughly**: Read GitHub discussions
+3. **Vote on-chain**: Yes, No, or Abstain
+4. **Be timely**: Don't miss the 5-day window
+
+### Types of Votes
+
+- **Admission**: New clubs joining (like you did!)
+- **Budget**: Funding requests for events
+- **Policy**: Governance changes
+- **Treasury**: Multi-sig updates
+
+### How to Vote
+
+1. Visit the Realms proposal page
+2. Connect your council wallet
+3. Click your vote choice
+4. Add a comment explaining your reasoning (optional but encouraged)
+
+## Common Questions
+
+### How much SOL do I need?
+
+- **For transactions**: ~0.01-0.1 SOL covers most operations
+- **For council membership**: No SOL required, you'll receive a council NFT
+
+### What if our proposal is rejected?
+
+- **Get feedback**: Ask voters for their reasoning
+- **Revise and resubmit**: Most proposals pass after revision
+- **Start smaller**: Try a smaller budget first to build trust
+
+### How do we calculate our contribution?
+
+Example calculation
+
+```
+Event Revenue: $5,000
+Event Costs: -$4,200
+Net Proceeds: $800
+Contribution (10%): $80
+```
+
+### Can we change our club wallet?
+
+Yes, through a treasury proposal. Update your profile and notify the council.
+
+## Best Practices
+
+### For New Clubs
+
+✅ **Start small**: First proposal under $1,000
+✅ **Document everything**: Photos, receipts, attendee counts
+✅ **Engage actively**: Join Discord, attend calls
+✅ **Give back promptly**: Within 30 days of events
+✅ **Help others**: Sponsor new clubs once established
+
+### For Proposals
+
+✅ **Be specific**: Clear budgets and timelines
+✅ **Show impact**: How many students will benefit?
+✅ **Plan ahead**: Submit 2+ weeks before your event
+✅ **Follow up**: Share results after execution
+
+## Need Help?
+
+- **Discord**: Join #onboarding for real-time help
+- **Office Hours**: Tuesdays 3pm UTC
+- **Mentorship**: Your sponsor club is there to guide you
+- **Documentation**: Read the Governance and Treasury guides
+
+## Your Onboarding Checklist
+
+- [ ] Set up Solana wallet with ~0.1 SOL
+- [ ] Create GitHub account
+- [ ] Fork and clone the collegedao repository  
+- [ ] Create your club profile (profiles/clubs/your-slug.mdx)
+- [ ] Submit profile PR
+- [ ] Find a sponsor club
+- [ ] Create admission proposal
+- [ ] Get voted into council
+- [ ] Submit your first funding proposal
+- [ ] Execute your funded event
+- [ ] Contribute 5-10% back to DAO
+- [ ] Vote on other proposals
+- [ ] Sponsor a new club!
+
+Welcome to College DAO! We're excited to have you join our community of builders. 🎓🚀
