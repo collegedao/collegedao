@@ -42,9 +42,9 @@ export function validateDate(dateStr) {
 
 export const REQUIRED_FRONTMATTER = {
   profile: {
-    club: ['name', 'slug', 'type', 'university', 'region', 'website'],
-    organization: ['name', 'slug', 'type', 'region', 'website'],
-    donor: ['name', 'slug', 'type', 'region', 'website']
+    club: ['name', 'university', 'region', 'website'],
+    organization: ['name', 'region', 'website'],
+    donor: ['name', 'region', 'website']
   },
   contribution: ['title', 'date', 'season', 'year', 'entity_type'],
   proposal: ['title', 'proposer', 'season', 'year', 'category', 'status']

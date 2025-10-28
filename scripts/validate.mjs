@@ -19,8 +19,30 @@ function logWarning(file, message) {
 
 async function validateProfile(filePath) {
   const { data, content } = await readMarkdownFile(filePath);
-  const type = data.type;
-  
+
+  // Derive type from folder path
+  const pathParts = filePath.split(path.sep);
+  const profilesIndex = pathParts.indexOf('profiles');
+  if (profilesIndex < 0) {
+    logError(filePath, 'File is not in profiles folder');
+    return;
+  }
+
+  const folderName = pathParts[profilesIndex + 1];
+
+  // Map plural folder names to singular entity types
+  const folderTypeMap = {
+    'clubs': 'club',
+    'organizations': 'organization',
+    'donors': 'donor'
+  };
+
+  const type = folderTypeMap[folderName];
+  if (!type) {
+    logError(filePath, `Invalid profile folder: ${folderName}. Must be one of: clubs, organizations, donors`);
+    return;
+  }
+
   // Check required frontmatter
   const required = REQUIRED_FRONTMATTER.profile[type] || REQUIRED_FRONTMATTER.profile.donor;
   for (const field of required) {
@@ -28,28 +50,17 @@ async function validateProfile(filePath) {
       logError(filePath, `Missing required frontmatter field: ${field}`);
     }
   }
-  
-  // Validate type
-  if (!VALID_ENTITY_TYPES.includes(type)) {
-    logError(filePath, `Invalid entity type: ${type}. Must be one of: ${VALID_ENTITY_TYPES.join(', ')}`);
-  }
-  
+
   // Check required sections
   for (const section of REQUIRED_SECTIONS.profile) {
     if (!content.includes(section)) {
       logError(filePath, `Missing required section: ${section}`);
     }
   }
-  
+
   // Check for contributions link
   if (!content.includes('contributions/')) {
     logWarning(filePath, 'Profile should link to contributions folder');
-  }
-  
-  // Validate slug matches filename
-  const expectedSlug = path.basename(filePath, '.mdx');
-  if (data.slug !== expectedSlug) {
-    logError(filePath, `Slug "${data.slug}" doesn't match filename "${expectedSlug}"`);
   }
 }
 
