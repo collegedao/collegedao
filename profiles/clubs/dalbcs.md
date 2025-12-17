@@ -1,22 +1,44 @@
 ---
 name: Dalhousie Blockchain Society
 slug: dalbcs
+type: club
 university: Dalhousie University
-location: Halifax, Nova Scotia, Canada
-chains:
+region: North America
+website: [Not up yet]
+socials:
+	x: 'https://x.com/dalbcs?s=20'
+	instagram: 'https://www.instagram.com/dal_bcs/'
+	linkedin: 'https://www.linkedin.com/company/dalhousie-blockchain-society/posts/?feedView=all'
+wallets:
   - Solana: 6D1sHkHSDHqPTLpwNSStAcBLSar4mz4gHm9brsXBHY7m
   - Ethereum: 0x816EA4479872c1D9677B22941B7CA0EDc4ca4D86
-leaders:
-  - name: Cohen Draper
-    	role: Co-President
-  - name: Mitchell Haydar
-    	role: Co-President
 ---
+
 
 ## About
 DalBCS is a student-led blockchain club at Dalhousie University focused on education, building, and community.
 
-## Activities
-- Workshops and learning sessions
-- Hackathons and project nights
-- Guest speakers and ecosystem partnerships
+
+##Contributions
+
+View all our contributions to College DAO: [contributions/clubs/example/](../../contributions/clubs/example/)
+
+
+## Totals
+
+Total contributed (USD): $00.00
+Last contribution: 2025-09-08
+
+
+## Contacts
+
+name: Cohen Draper
+role: Co-President       
+Email: Cohen.Draper@dal.ca
+Telegram: Bluetrigg544
+
+name: Mitchell Haydar
+role: Co-President 
+Email: Mitchellhaydar0@gmail.com
+Telegram: Mitchellhaydar
+
