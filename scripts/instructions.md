@@ -137,7 +137,7 @@ Leadership info...
 ```yaml
 ---
 title: Annual Hackathon Support
-date: 2025-09-15
+date: 2026-09-15
 amount: 500.00
 token: USDC
 chain: solana
@@ -152,7 +152,7 @@ message: Keep building!
 | Field | Value |
 |-------|-------|
 | **Amount** | 500.00 USDC |
-| **Date** | 2025-09-15 |
+| **Date** | 2026-09-15 |
 | **From** | Jane Smith |
 | **Network** | Solana |
 
@@ -166,12 +166,12 @@ message: Keep building!
 ---
 title: Conference Travel Sponsorship
 proposer: berkeley-blockchain
-date: 2025-09-01
+date: 2026-09-01
 requested_amount_usd: 15000
 ---
 
 ![Status](https://img.shields.io/badge/Status:-Draft-yellow)
-![Season](https://img.shields.io/badge/Season:-Fall%202025-purple)
+![Season](https://img.shields.io/badge/Season:-Fall%202026-purple)
 
 ## 1. Event Overview
 ...

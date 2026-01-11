@@ -14,7 +14,7 @@
 - 
 
 ## Proposal Details (if applicable)
-**Proposal Season/Year:** <!-- e.g., fall/2025 -->
+**Proposal Season/Year:** <!-- e.g., fall/2026 -->
 **Requested Amount:** <!-- $USD -->
 **Category:** <!-- admission / budget / policy / treasury / other -->
 

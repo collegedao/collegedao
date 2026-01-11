@@ -82,10 +82,10 @@
       "pages": ["profiles/donors/example"]
     },
     {
-      "group": "2025 Proposals",
+      "group": "2026 Proposals",
       "pages": [
         "proposals/overview",
-        "proposals/2025/fall/example-travel-sponsorship"
+        "proposals/2026/fall/example-travel-sponsorship"
       ]
     },
     {
@@ -94,15 +94,15 @@
     },
     {
       "group": "Club Contributions",
-      "pages": ["contributions/clubs/example/2025/example-event"]
+      "pages": ["contributions/clubs/example/2026/example-event"]
     },
     {
       "group": "Organization Contributions",
-      "pages": ["contributions/organizations/example/2025/kickoff-support"]
+      "pages": ["contributions/organizations/example/2026/kickoff-support"]
     },
     {
       "group": "Donor Contributions",
-      "pages": ["contributions/donors/example/2025/example-donation"]
+      "pages": ["contributions/donors/example/2026/example-donation"]
     }
   ],
   "footerSocials": {

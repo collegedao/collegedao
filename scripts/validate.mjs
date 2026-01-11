@@ -130,7 +130,7 @@ async function validateDonation(filePath) {
     // Validate year folder is numeric
     const yearFolder = pathParts[donationsIndex + 3];
     if (yearFolder && !/^\d{4}$/.test(yearFolder)) {
-      logWarning(filePath, `Year folder "${yearFolder}" should be a 4-digit year (e.g., 2025)`);
+      logWarning(filePath, `Year folder "${yearFolder}" should be a 4-digit year (e.g., 2026)`);
     }
   }
 }

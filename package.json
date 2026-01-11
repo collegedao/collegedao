@@ -1,7 +1,7 @@
 {
   "name": "collegedao",
   "version": "1.0.0",
-  "description": "College DAO - Supporting blockchain innovation across 150+ universities",
+  "description": "College DAO - Supporting blockchain innovation across 120+ universities",
   "type": "module",
   "scripts": {
     "format": "prettier -w .",
