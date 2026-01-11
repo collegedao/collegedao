@@ -1,0 +1,46 @@
+# Donation Template Instructions
+
+## File Naming
+
+Save your file following this path convention:
+```
+donations/{type}/{slug}/{year}/{YYYY-MM-DD}-{description}.mdx
+```
+
+Example: `donations/clubs/example-club/2025/2025-01-15-treasury-contribution.mdx`
+
+## Frontmatter
+
+Fill in all fields:
+- `title`: Brief description of the donation
+- `date`: Transaction date (YYYY-MM-DD format)
+- `amount`: Numerical amount (e.g., 100.00)
+- `token`: Cryptocurrency token (e.g., USDC)
+- `chain`: Blockchain network (e.g., solana)
+- `tx_hash`: Full transaction hash for verification
+- `donor_name`: Name or identifier of donor
+- `anonymous`: Set to `true` if donor wishes to remain anonymous
+- `message`: Optional message from donor (leave empty if none)
+
+## Donation Details Table
+
+Update the table values to match your frontmatter:
+- Amount and token
+- Date
+- From (donor name or "Anonymous")
+- Network
+
+## Donor Message
+
+Replace the placeholder quote with the actual donor message, or remove the line entirely if there is no message.
+
+## Transaction Link
+
+Paste the transaction hash at the end of the Solscan URL:
+```
+https://solscan.io/tx/{your-tx-hash-here}
+```
+
+---
+
+**REMINDER:** The template should contain no instructions when submitted.

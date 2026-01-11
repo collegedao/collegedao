@@ -8,7 +8,6 @@ export async function readMarkdownFile(filePath) {
 }
 
 export async function writeMarkdownFile(filePath, data, content) {
-  // Convert any Date objects in data to strings
   const cleanData = { ...data };
   if (cleanData.date instanceof Date) {
     cleanData.date = cleanData.date.toISOString().split('T')[0];
@@ -22,6 +21,8 @@ export function formatCurrency(amount) {
 }
 
 export function parseAmount(amountStr) {
+  if (typeof amountStr === 'number') return amountStr;
+  if (typeof amountStr !== 'string') return null;
   const match = amountStr.match(/^\$?([\d,]+\.?\d*)$/);
   if (!match) return null;
   return parseFloat(match[1].replace(/,/g, ''));
@@ -36,32 +37,42 @@ export async function ensureDir(dirPath) {
 }
 
 export function validateDate(dateStr) {
+  if (dateStr instanceof Date) {
+    return !isNaN(dateStr.getTime());
+  }
   const date = new Date(dateStr);
   return !isNaN(date.getTime()) && /^\d{4}-\d{2}-\d{2}$/.test(dateStr);
 }
 
+export function toDateString(date) {
+  if (date instanceof Date) {
+    return date.toISOString().split('T')[0];
+  }
+  return date;
+}
+
+// =============================================================================
+// SCHEMA DEFINITIONS - Updated to match actual codebase structure
+// =============================================================================
+
 export const REQUIRED_FRONTMATTER = {
-  profile: {
-    club: ['name', 'university', 'region', 'website'],
-    organization: ['name', 'region', 'website'],
-    donor: ['name', 'region', 'website']
-  },
-  contribution: ['title', 'date', 'season', 'year', 'entity_type'],
-  proposal: ['title', 'proposer', 'season', 'year', 'category', 'status']
+  club: ['name', 'university', 'region'],
+  donation: ['title', 'date', 'amount', 'token', 'chain', 'tx_hash'],
+  proposal: ['title', 'proposer', 'date', 'requested_amount_usd'],
 };
 
 export const REQUIRED_SECTIONS = {
-  profile: ['# Overview', '## Wallets', '## Contributions', '## Totals'],
-  proposal: ['# Summary', '## Motivation & Impact', '## Budget & Milestones'],
-  contribution: ['# Summary', '## Evidence', '## Financials']
+  club: ['# About', '## Wallets', '## Donations', '## Totals'],
+  donation: [],
+  proposal: [],
 };
 
-export const VALID_SEASONS = ['spring', 'summer', 'fall', 'winter'];
+export const VALID_TOKENS = ['USDC', 'SOL', 'ETH', 'USDT'];
+export const VALID_CHAINS = ['solana', 'ethereum', 'base', 'polygon'];
 export const VALID_ENTITY_TYPES = ['club', 'organization', 'donor'];
-export const VALID_PROPOSAL_CATEGORIES = ['admission', 'budget', 'policy', 'treasury', 'other'];
-export const VALID_PROPOSAL_STATUSES = ['draft', 'voting', 'approved', 'rejected', 'executed'];
+export const VALID_SEASONS = ['spring', 'summer', 'fall', 'winter'];
 
-export async function getAllFiles(dir, pattern = '**/*.md') {
+export async function getAllFiles(dir, pattern = '**/*.mdx') {
   const { globby } = await import('globby');
   return globby(pattern, { cwd: dir, absolute: true });
 }

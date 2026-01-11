@@ -9,99 +9,100 @@ College DAO operates through a council-based governance model designed for unive
 - **No governance token**
 - **Equal voting power for all council members**
 - **Transparent on-chain execution via Realms**
+- **Manual verification by CollegeDAO core team**
+
+### Club Status
+
+Clubs are classified as either **Active** or **Dormant**:
+
+| Status | Definition | Voting Rights | Fund Membership |
+|--------|------------|---------------|-----------------|
+| **Active** | Verified by CollegeDAO, holds council role, participates in governance | Full voting rights | ✅ Eligible for funding and matching |
+| **Dormant** | Has not participated in voting for 2+ consecutive quarters | None | ❌ Removed from Ecosystem Fund |
+
+**Dormancy = Removal from Fund**: When a club becomes dormant, they are automatically removed from the Ecosystem Fund. To rejoin, they must go through the full admission process again—securing a sponsor and passing a council vote. This ensures only actively participating clubs remain in the fund.
 
 ### Admission Requirements
 
-New clubs can join the council by:
+New clubs and returning dormant clubs can join the council by:
 1. Having an active blockchain club at an accredited university
-2. Securing membership backing from an existing council member
-3. Submitting a club profile with verified information
-4. Passing a council vote (simple majority)
+2. [Registering through our onboarding form](https://tally.so/r/lbeyGp)
+3. Securing sponsorship from an existing council member
+4. Passing a council admission vote (66% supermajority)
+5. Receiving council member role from CollegeDAO core team
 
-Existing council members are responsible for vetting new clubs and adding them to the council
+<Note>
+**Returning Clubs**: Previously dormant clubs must complete the same admission process. There is no automatic reinstatement—existing council members vote on all admissions equally.
+</Note>
 
-## Proposal Categories
+## Proposal Types
 
-### 1. **Admission** (`admission`)
-- New club applications to join the council
-- Requires: Club profile, member club's endorsement
-- Voting: Supermajority (66%)
+- **Funding Requests**: Events, hackathons, travel sponsorships, and other budget requests
+- **New Club Admissions**: Adding new university clubs to the council
+- **Policy & Treasury Changes**: Governance and treasury updates
 
-### 2. **Budget** (`budget`)  
-- Funding requests for events, hackathons, workshops
-- Travel sponsorships for conferences
-- Educational initiatives and resources
-- Requires: Detailed budget, milestones, expected outcomes
-- Voting: Supermajority (66%)
-
-### 3. **Policy** (`policy`)
-- Changes to governance rules
-- Updates to contribution guidelines
-- Modifications to council structure
-- Requires: Clear rationale, implementation plan
-- Voting: Supermajority (66%)
-
-### 4. **Treasury** (`treasury`)
-- Multi-sig signer changes
-- Treasury diversification strategies
-- Chain additions or migrations
-- Requires: Security review, technical details
-- Voting: Supermajority (66%)
-
-### 5. **Other** (`other`)
-- Community initiatives
-- Partnerships and collaborations
-- Special projects
-- Voting: Supermajority (66%)
+All proposals require supermajority (66%) approval from council members.
 
 ## Voting Process
 
 ### Proposal Lifecycle
 
-1. **Draft Phase** (GitHub)
-   - Create proposal in `proposals/<year>/<season>/<slug>.md`
-   - Open PR for community discussion
-   - Minimum 3 days for feedback
+1. **Submission**
+   - Submit your proposal through our form
+   - Minimum 3 days for community review
 
-2. **Voting Phase** (Realms)
-   - Create on-chain proposal with final terms
-   - Link GitHub proposal URL in Realms proposal
+2. **Review Phase**
+   - CollegeDAO core team reviews for completeness
+   - Council reviewers check alignment with treasury guidelines
+   - Feedback provided before on-chain vote
+
+3. **Voting Phase** (Realms)
+   - On-chain proposal created with final terms
    - Voting period: 5 days
+   - All active council members encouraged to vote
 
-3. **Execution Phase**
+4. **Execution Phase**
    - Approved proposals execute on-chain
-   - Update GitHub proposal status to `executed` and add the Realms URL to the Github proposal
+   - Funds transferred to club wallet
    - Document outcomes and impact
 
 ### Quorum Requirements
 
-- **Supermajority**: 66% of council members must vote
+Quorum scales dynamically based on the number of active clubs to maintain governance efficiency as the network grows:
+
+| Active Clubs | Quorum Threshold | Example |
+|--------------|------------------|---------|
+| 1-15 | 40% | 6 of 15 clubs |
+| 16-30 | 33% | 10 of 30 clubs |
+| 31-50 | 25% | 12 of 50 clubs |
+| 51+ | 20% | 12 of 60 clubs |
+
+- **Quorum**: The percentage of active clubs (per table above) that must cast a vote (Yes, No, or Abstain)
+- **Approval**: 66% supermajority of votes cast must approve
+- **Active Count**: Determined at proposal creation time based on current active club roster
+
+If quorum is not met, the proposal may be extended or resubmitted.
 
 ### Voting Rights
 
 - Each verified club holds one vote
 - Votes are non-transferable
-- Members must maintain active status (at least 1 contribution per year)
+- Only active clubs may vote
 
-## GitHub Integration
+## How to Vote
 
-GitHub serves as the primary platform for:
-- **Proposal drafting and discussion**
-- **Contribution tracking and transparency**
-- **Community engagement**
-- **Historical record keeping**
-
-While GitHub hosts discussions and drafts, **Realms remains the authoritative platform** for:
-- Final voting
-- Treasury actions
-- On-chain execution
+1. Visit [Realms](https://realms.today) and find College DAO
+2. Connect your council wallet (the wallet that holds your council role)
+3. Review the proposal details
+4. Cast your vote: Yes, No, or Abstain
+5. Add a comment explaining your reasoning (encouraged)
 
 ## Seasonal Schedule
 
-College DAO operates on a simplified quarterly/academic calendar:
+College DAO operates on a quarterly/academic calendar:
 
 - **Winter (Q1)** (Jan - Mar): Major events, annual planning and treasury review
-- **Spring (Q2)** (Apr - Jun): Focus on hackathons, internships and founder/startup residencies
+- **Spring (Q2)** (Apr - Jun): Focus on hackathons, internships and founder residencies
 - **Summer (Q3)** (Jul - Sep): Conference sponsorships and internships
 - **Fall (Q4)** (Oct - Dec): New club onboarding and major events
 
@@ -111,21 +112,29 @@ College DAO operates on a simplified quarterly/academic calendar:
 2. **Show Impact**: Explain how this benefits the broader community
 3. **Budget Wisely**: Provide detailed cost breakdowns
 4. **Set Milestones**: Define checkpoints for multi-phase projects
-5. **Give Back**: Include plans for contributing back to the DAO
 
 ## Council Responsibilities
 
 Members are expected to:
-- Review and vote on proposals
+- Review and vote on proposals regularly
+- Participate in at least one vote per quarter to maintain active status
 - Sponsor and mentor new clubs
-- Contribute to the treasury (5-10% of funded events)
-- Maintain active club operations
+- Maintain active club operations at their university
 - Participate in governance discussions
+
+## Conflict of Interest
+
+Council members should disclose conflicts when:
+- They share leadership with another council club
+- They have a direct financial interest in a proposal outcome
+- A proposal directly benefits their club
+
+Members with conflicts should either abstain or provide a public explanation of their vote.
 
 ## Dispute Resolution
 
 Conflicts are resolved through:
-1. Community discussion on GitHub
+1. Community discussion
 2. Mediation by volunteer council members
 3. Formal vote if consensus cannot be reached
 4. Appeals process for significant disputes
